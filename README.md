@@ -5,13 +5,13 @@ The sleek mult-page space travel website. This is responsive site featuring a ho
 
 > Desktop Previews
 
-<img src="preview/homepage-desktop.png" height="450">
+<img src="preview/homepage-desktop.PNG" height="450">
 
 > Mobile navigation Previews
 
 <img src="preview/homepage-mobile-nav.PNG" height="350">
 
-### Summury
+### Summary
 Brought a Frontend Mentor design to life and created my own design system while building a multi-page space travel website with Kevin Powell as my guide.
 
 ### Demo
