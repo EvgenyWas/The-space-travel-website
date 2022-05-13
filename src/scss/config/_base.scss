@@ -1,0 +1,28 @@
+/* ------------------- */
+/* Base               */
+/* ------------------- */
+
+/* set up the body */
+body {
+    font-family: $ff-sans-normal;
+    font-size: $fs-400;
+    color: $clr-white;
+    background-color: $clr-dark;
+    line-height: 1.5;
+    min-height: 100vh;
+
+    background-size: cover;
+    background-position: bottom center;
+
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
+    overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+} 

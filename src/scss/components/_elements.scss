@@ -1,0 +1,211 @@
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+
+.large-button {
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+    display: inline-grid;
+    place-items: center;
+    padding: 0 2em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    text-decoration: none;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: hsl(0 0% 100% / .1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+/* primary-header */
+
+.logo {
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.primary-navigation {
+    --gap: clamp(1.5rem, 5vw, 3.5rem);
+    --underline-gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl(0 0% 100% / 0.05);
+    backdrop-filter: blur(1.5rem);
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-right: .5em;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 35rem) {
+    .primary-navigation {
+        --underline-gap: .5rem;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+
+    .primary-navigation.underline-indicators > .active {
+        border: 0;
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url(../assets/shared/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(../assets/shared/icon-close.svg);
+    }
+    
+    .mobile-nav-toggle:focus-visible {
+        outline: 5px solid white;
+        outline-offset: 5px;
+    }
+}
+
+@media (min-width: 35em) {
+    .primary-navigation {
+        padding-inline: clamp(3rem, 7vw, 7rem);
+    }
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+    .primary-navigation a > span {
+        display: none;
+    }
+}
+
+@media (min-width: 45em) {
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 100%;
+        margin-right: -2.5rem;
+        background: hsl(0 0% 100% / .25);
+        order: 1;
+    }
+     
+    nav {
+        order: 2;
+    }
+    
+    .primary-navigation {
+        margin-block: 2rem;
+    }
+}
+
+.underline-indicators > * {
+    cursor: pointer;
+    padding: var(--underline-gap, .5rem) 0;
+    border: 0;
+    border-bottom: .2rem solid hsl(0 0% 100% / 0);
+    background-color: transparent;
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl(0 0% 100% / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+    color: hsl(0 0% 100% / 1);
+    border-color: hsl(0 0% 100% / 1);
+}
+
+.tab-list {
+    --gap: 2rem;
+}
+
+.dot-indicators > * {
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    padding: .5em;
+    background-color: hsl(0 0% 100% / .25);
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+    background-color: hsl(0 0% 100% / .5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+    background-color: hsl(0 0% 100% / 1); 
+}
+
+.numbers-indicators > * {
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    font-size: 2rem;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid hsl(0 0% 100% / .25);
+    aspect-ratio: 1;
+    text-decoration: none;
+    background-color: transparent;
+    color: $clr-white;
+}
+
+.numbers-indicators > [aria-selected="true"] {
+    background-color: hsl(0 0% 100% / 1);
+    color: $clr-dark;
+}
+
+.numbers-indicators > *:hover {
+    border: 1px solid hsl(0 0% 100% / .5);
+}

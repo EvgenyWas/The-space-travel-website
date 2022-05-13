@@ -1,0 +1,30 @@
+// HOME PAGE 
+.home {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+    .home {
+        background-position: center center;
+        background-image: url(../assets/home/background-home-tablet.jpg);
+    }
+}
+
+@media (min-width: 45em) {
+    .home {
+        background-image: url(../assets/home/background-home-desktop.jpg);
+    }
+
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
+
+    .grid-container--home > *:first-child {
+        grid-column: 2;
+    }
+
+    .grid-container--home > *:last-child {
+        grid-column: 3;
+    }
+}

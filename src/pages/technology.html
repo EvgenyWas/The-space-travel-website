@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="stylesheet" href="../scss/index.scss">
+    <title>Space tourism website</title>
+    <script src="../scripts/nav.js" defer></script>
+    <script src="../scripts/btn.js" defer></script>
+</head>
+<body class="technology">
+  <header class="primary-header flex">
+    <div>
+      <img src="../assets/shared/logo.svg" alt="space tourism logo" class="logo">
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="../index.html"><span aria-hidden="true">00</span>Home</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a>
+            <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a>
+        </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="grid-container grid-container--technology flow">
+    <h1 class="numbered-title fs-500"><span aria-hidden="true">03</span> Space launch 101</h1>
+    
+    <div class="numbers-indicators flex" role="tablist" aria-label="technology member list">
+      <button aria-selected="true" aria-controls="vehicle-tab" role="tab" data-image="vehicle-image" tabindex="0"><span class="ff-serif">1</span></button>
+      <button aria-selected="false" aria-controls="spaceport-tab" role="tab" data-image="spaceport-image" tabindex="-1"><span class="ff-serif">2</span></button>
+      <button aria-selected="false" aria-controls="capsule-tab" role="tab" data-image="capsule-image" tabindex="-1"><span class="ff-serif">3</span></button>
+    </div>
+    
+    <!-- launch vehicle -->
+    <article class="technology-details flow" id="vehicle-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
+        <p class="fs-700 uppercase ff-serif">Launch vehicle</p>
+      </header>
+      <p>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+        payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+        WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+        it's quite an awe-inspiring sight on the launch pad!</p>
+    </article>
+
+    <!-- spaceport -->
+    <article class="technology-details flow" id="spaceport-tab" role="tabpanel" tabindex="0" hidden>
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
+        <p class="fs-700 uppercase ff-serif">Spaceport</p>
+      </header>
+      <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+        by analogy to the seaport for ships or airport for aircraft. Based in the 
+        famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+        of the Earth’s rotation for launch.</p>
+    </article>
+
+    <!-- space capsule -->
+    <article class="technology-details flow" id="capsule-tab" role="tabpanel" tabindex="0" hidden>
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
+        <p class="fs-700 uppercase ff-serif">Space capsule</p>
+      </header>
+      <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+        capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+        you'll spend your time during the flight. It includes a space gym, cinema, 
+        and plenty of other activities to keep you entertained.</p>
+    </article>
+    
+    <picture id="vehicle-image" class="landscape">
+      <source srcset="../assets/technology/image-launch-vehicle-landscape.jpg" type="image/jpg">
+      <img src="../assets/technology/image-launch-vehicle-landscape.jpg" alt="Douglas Hurley">
+    </picture>
+    <picture id="vehicle-image" class="portrait">
+      <source srcset="../assets/technology/image-launch-vehicle-portrait.jpg" type="image/jpg">
+      <img src="../assets/technology/image-launch-vehicle-portrait.jpg" alt="Douglas Hurley">
+    </picture>
+    <picture id="spaceport-image" class="landscape" style="display: none">
+      <source srcset="../assets/technology/image-spaceport-landscape.jpg" type="image/jpg">
+      <img src="../assets/technology/image-spaceport-landscape.jpg" alt="Douglas Hurley">
+    </picture>
+    <picture id="spaceport-image" class="portrait" style="display: none">
+      <source srcset="../assets/technology/image-spaceport-portrait.jpg" type="image/jpg">
+      <img src="../assets/technology/image-spaceport-portrait.jpg" alt="Douglas Hurley">
+    </picture>
+    <picture id="capsule-image" class="landscape" style="display: none">
+      <source srcset="../assets/technology/image-space-capsule-landscape.jpg" type="image/jpg">
+      <img src="../assets/technology/image-space-capsule-landscape.jpg" alt="Douglas Hurley">
+    </picture>
+    <picture id="capsule-image" class="portrait" style="display: none">
+      <source srcset="../assets/technology/image-space-capsule-portrait.jpg" type="image/jpg">
+      <img src="../assets/technology/image-space-capsule-portrait.jpg" alt="Douglas Hurley">
+    </picture>
+  </main>
+</body>
+</html>
