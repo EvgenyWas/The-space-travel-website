@@ -3,11 +3,11 @@ The sleek mult-page space travel website. This is responsive site featuring a ho
 
 ### Preview
 
-> Desktop Previews
+> Desktop Preview
 
 <img src="preview/homepage-desktop.PNG" height="450">
 
-> Mobile navigation Previews
+> Mobile navigation Preview
 
 <img src="preview/homepage-mobile-nav.PNG" height="350">
 
